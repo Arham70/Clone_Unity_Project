@@ -1,0 +1,63 @@
+{% load static %}
+{% block sidebar %}
+  <!-- ========== App Menu ========== -->
+  <div class="app-menu navbar-menu">
+    <!-- LOGO -->
+    <div class="navbar-brand-box">
+      <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover"><i class="ri-record-circle-line"></i></button>
+    </div>
+    <div id="scrollbar">
+      <div class="container-fluid">
+        <div id="two-column-menu"></div>
+        <ul class="navbar-nav" id="navbar-nav">
+          <li class="menu-title">
+            <span data-key="t-menu">ADMIN PANEL</span>
+          </li>
+          {% comment %} <li class="nav-item">
+            <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards"><i class="mdi mdi-monitor-dashboard"></i> <span data-key="t-dashboards">Dashboard</span></a>
+            <div class="collapse menu-dropdown" id="sidebarDashboards">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="{% url 'dashboards:dashboard' %}" class="nav-link" data-key="t-analytics"><i class="mdi mdi-google-analytics"></i>Analytics</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- end Dashboard Menu --> {% endcomment %}
+          <li class="nav-item">
+            <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="sidebarApps"><i class="mdi mdi-account-tie"></i> <span data-key="t-dashboards">Unity Model</span></a>
+            <div class="collapse show menu-dropdown" id="sidebarApps">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="{% url 'attribute:attribute_list' %}" class="nav-link"><i class="mdi mdi-newspaper-variant-outline"></i>Attribute</a>
+                </li>
+
+              </ul>
+            </div>
+            <a class="nav-link menu-link" href="#upcoming_models" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="upcoming_models"><i class="mdi mdi-account-tie"></i> <span data-key="t-dashboards">Upcoming Models</span></a>
+            <div class="collapse show menu-dropdown" id="upcoming_models">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="{% url 'attribute:attribute_list' %}" class="nav-link"><i class="mdi mdi-note"></i>Attribute</a>
+                </li>
+              </ul>
+            </div>
+            <a class="nav-link menu-link" href="#logsmodel" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="logsmodel"><i class="mdi mdi-account-tie"></i> <span data-key="t-dashboards">Logs Models</span></a>
+            <div class="collapse show menu-dropdown" id="logsmodel">
+              <ul class="nav nav-sm flex-column">
+            <li class="nav-item">
+              <a href="{% url 'attribute:attribute_list' %}" class="nav-link"><i class="mdi mdi-view-list"></i>API Ingestion Batch Status Logs</a>
+            </li>
+          </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Sidebar -->
+    </div>
+    <div class="sidebar-background"></div>
+  </div>
+  <!-- Left Sidebar End -->
+  <!-- Vertical Overlay -->
+  <div class="vertical-overlay"></div>
+{% endblock %}
